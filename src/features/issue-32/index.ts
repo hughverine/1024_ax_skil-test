@@ -1,2 +1,8 @@
-// TODO: Claude Codeが生成したコードをここに配置
-// Task request: .ai/task-requests/issue-32.md
+/**
+ * Email Notification - Issue #32
+ */
+
+export async function sendEmail(to: string, subject: string, body: string) {
+  // Placeholder - in production use Edge Function
+  return { success: true, messageId: `msg_${Date.now()}` };
+}
