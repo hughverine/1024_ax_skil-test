@@ -16,3 +16,12 @@ next-env.d.ts
 # Testing
 playwright-report/
 test-results/
+
+# Miyabi Agent Framework
+.ai/logs/*
+!.ai/logs/.gitkeep
+.ai/parallel-reports/*
+!.ai/parallel-reports/.gitkeep
+
+# TypeScript
+*.tsbuildinfo
