@@ -1,2 +1,7 @@
-// TODO: Claude Codeが生成したコードをここに配置
-// Task request: .ai/task-requests/issue-30.md
+/**
+ * Supplementary Question Screen - Issue #30
+ */
+
+export function getSupplementaryQuestion(domain: string) {
+  return { questionId: `supp-${domain}-1`, stem: `Supplementary question for ${domain}` };
+}

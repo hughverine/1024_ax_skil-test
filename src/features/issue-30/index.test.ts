@@ -1,1 +1,8 @@
-// TODO: Claude Codeが生成したテストコードをここに配置
+import { describe, it, expect } from "vitest";
+import { getSupplementaryQuestion } from "./index";
+
+describe("Issue #30 - Supplementary Questions", () => {
+  it("gets supplementary question", () => {
+    expect(getSupplementaryQuestion("AI").questionId).toContain("AI");
+  });
+});
