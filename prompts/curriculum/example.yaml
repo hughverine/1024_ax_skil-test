@@ -1,0 +1,46 @@
+# AXCAMP Curriculum Example
+# This is a sample knowledge file for testing the knowledge loader
+
+- type: knowledge
+  category: 経営戦略
+  subcategory: SWOT分析
+  summary: SWOT分析は、企業の内部環境（強み・弱み）と外部環境（機会・脅威）を評価するための戦略フレームワークです
+  key_points:
+    - Strengths（強み）: 企業の競争優位性
+    - Weaknesses（弱み）: 改善が必要な領域
+    - Opportunities（機会）: 外部環境の有利な状況
+    - Threats（脅威）: 外部環境のリスク
+  解説: |
+    SWOT分析は1960年代にアルバート・ハンフリーによって開発されました。
+    この分析手法は、戦略立案の初期段階で広く使用され、企業が自社の
+    現状を客観的に理解し、適切な戦略を策定するのに役立ちます。
+
+- type: knowledge
+  category: 経営戦略
+  subcategory: ポーターの5つの力
+  summary: マイケル・ポーターが提唱した業界構造分析のフレームワーク
+  key_points:
+    - 新規参入の脅威
+    - 代替品の脅威
+    - 買い手の交渉力
+    - 売り手の交渉力
+    - 既存競合者間の敵対関係
+  解説: |
+    ポーターの5つの力は、業界の収益性と競争の激しさを決定する
+    5つの競争要因を分析します。これにより、企業は自社の競争環境を
+    体系的に理解し、適切な競争戦略を策定できます。
+
+- type: knowledge
+  category: マーケティング
+  subcategory: 4P分析
+  summary: マーケティングミックスの基本フレームワーク
+  key_points:
+    - Product（製品）: 顧客価値の創造
+    - Price（価格）: 価格戦略
+    - Place（流通）: チャネル戦略
+    - Promotion（プロモーション）: コミュニケーション戦略
+  解説: |
+    4P分析は、E.ジェローム・マッカーシーによって1960年に提唱された
+    マーケティング戦略の基本フレームワークです。製品、価格、流通、
+    プロモーションの4つの要素を統合的に管理することで、
+    効果的なマーケティング活動を展開できます。

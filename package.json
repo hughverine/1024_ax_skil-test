@@ -9,6 +9,7 @@
   "scripts": {
     "agents:parallel:exec": "tsx scripts/agents-parallel-executor.ts",
     "agents:status": "tsx scripts/agents-status.ts",
+    "load:knowledge": "tsx scripts/load-knowledge.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
