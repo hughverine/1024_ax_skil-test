@@ -7,3 +7,12 @@ build/
 coverage/
 .vscode/
 .idea/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Testing
+playwright-report/
+test-results/
