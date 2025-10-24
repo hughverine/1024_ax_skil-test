@@ -1,0 +1,376 @@
+{
+  "metadata": {
+    "repository": "hughverine/1024_ax_skil-test",
+    "total_issues": 22,
+    "total_epics": 14,
+    "generated_at": "2025-10-24T10:00:00Z"
+  },
+  "dag": {
+    "nodes": [
+      {
+        "id": "issue-15",
+        "number": 15,
+        "title": "Issue 0-1: プロジェクト雛形の作成（Next.js + API Routes + Supabase + OpenAI）",
+        "epic": 1,
+        "level": 0,
+        "dependencies": [],
+        "estimatedMinutes": 60,
+        "type": "setup"
+      },
+      {
+        "id": "issue-16",
+        "number": 16,
+        "title": "Issue 1-1: データモデルの作成（SQLマイグレーション）",
+        "epic": 2,
+        "level": 1,
+        "dependencies": ["issue-15"],
+        "estimatedMinutes": 30,
+        "type": "database"
+      },
+      {
+        "id": "issue-17",
+        "number": 17,
+        "title": "Issue 1-2: RLS/Storage/バケット設計",
+        "epic": 2,
+        "level": 1,
+        "dependencies": ["issue-15"],
+        "estimatedMinutes": 30,
+        "type": "database"
+      },
+      {
+        "id": "issue-18",
+        "number": 18,
+        "title": "Issue 2-1: YAML → チャンク → 埋め込み → Supabase格納",
+        "epic": 3,
+        "level": 2,
+        "dependencies": ["issue-16", "issue-17"],
+        "estimatedMinutes": 30,
+        "type": "data"
+      },
+      {
+        "id": "issue-19",
+        "number": 19,
+        "title": "Issue 3-1: プロンプト外部化とバージョン管理",
+        "epic": 4,
+        "level": 3,
+        "dependencies": ["issue-15"],
+        "estimatedMinutes": 20,
+        "type": "config"
+      },
+      {
+        "id": "issue-20",
+        "number": 20,
+        "title": "Issue 3-2: Structured Outputs（JSON Schema）で I/O を厳密化",
+        "epic": 4,
+        "level": 3,
+        "dependencies": ["issue-15"],
+        "estimatedMinutes": 20,
+        "type": "api"
+      },
+      {
+        "id": "issue-21",
+        "number": 21,
+        "title": "Issue 4-1: 出題ブループリント（配分・カテゴリ分散・難易度）",
+        "epic": 5,
+        "level": 4,
+        "dependencies": ["issue-18", "issue-19", "issue-20"],
+        "estimatedMinutes": 45,
+        "type": "feature"
+      },
+      {
+        "id": "issue-22",
+        "number": 22,
+        "title": "Issue 4-2: MCQ入力正規化モジュール",
+        "epic": 5,
+        "level": 4,
+        "dependencies": ["issue-18", "issue-19", "issue-20"],
+        "estimatedMinutes": 45,
+        "type": "feature"
+      },
+      {
+        "id": "issue-23",
+        "number": 23,
+        "title": "Issue 4-3: 既存問題の流用/類似検出（改題義務）",
+        "epic": 5,
+        "level": 4,
+        "dependencies": ["issue-18", "issue-19", "issue-20"],
+        "estimatedMinutes": 45,
+        "type": "feature"
+      },
+      {
+        "id": "issue-24",
+        "number": 24,
+        "title": "Issue 5-1: MCQ 採点（決定論／temperature=0）",
+        "epic": 6,
+        "level": 5,
+        "dependencies": ["issue-20", "issue-22"],
+        "estimatedMinutes": 30,
+        "type": "feature"
+      },
+      {
+        "id": "issue-25",
+        "number": 25,
+        "title": "Issue 5-2: 記述式 採点（ルーブリック + コピペ検出）",
+        "epic": 6,
+        "level": 5,
+        "dependencies": ["issue-20", "issue-22"],
+        "estimatedMinutes": 30,
+        "type": "feature"
+      },
+      {
+        "id": "issue-26",
+        "number": 26,
+        "title": "Issue 6-1: 補完ロジック & スコア補正",
+        "epic": 7,
+        "level": 6,
+        "dependencies": ["issue-24", "issue-25"],
+        "estimatedMinutes": 30,
+        "type": "feature"
+      },
+      {
+        "id": "issue-27",
+        "number": 27,
+        "title": "Issue 7-1: エンドポイント群の実装 + PII暗号化",
+        "epic": 8,
+        "level": 7,
+        "dependencies": ["issue-21", "issue-24", "issue-25", "issue-26"],
+        "estimatedMinutes": 60,
+        "type": "api"
+      },
+      {
+        "id": "issue-28",
+        "number": 28,
+        "title": "Issue 8-1: Startフォーム",
+        "epic": 9,
+        "level": 8,
+        "dependencies": ["issue-27"],
+        "estimatedMinutes": 45,
+        "type": "ui"
+      },
+      {
+        "id": "issue-29",
+        "number": 29,
+        "title": "Issue 8-2: テスト画面（逐次・即時採点）",
+        "epic": 9,
+        "level": 8,
+        "dependencies": ["issue-27"],
+        "estimatedMinutes": 45,
+        "type": "ui"
+      },
+      {
+        "id": "issue-30",
+        "number": 30,
+        "title": "Issue 8-3: 補完質問画面",
+        "epic": 9,
+        "level": 8,
+        "dependencies": ["issue-27"],
+        "estimatedMinutes": 45,
+        "type": "ui"
+      },
+      {
+        "id": "issue-31",
+        "number": 31,
+        "title": "Issue 8-4: 結果画面 + PDF出力",
+        "epic": 9,
+        "level": 8,
+        "dependencies": ["issue-27"],
+        "estimatedMinutes": 45,
+        "type": "ui"
+      },
+      {
+        "id": "issue-32",
+        "number": 32,
+        "title": "Issue 9-1: Edge Function でメール送信",
+        "epic": 10,
+        "level": 9,
+        "dependencies": ["issue-27", "issue-28"],
+        "estimatedMinutes": 30,
+        "type": "feature"
+      },
+      {
+        "id": "issue-33",
+        "number": 33,
+        "title": "Issue 10-1: ROI算定ロジック & チャート",
+        "epic": 11,
+        "level": 9,
+        "dependencies": ["issue-27", "issue-31"],
+        "estimatedMinutes": 30,
+        "type": "feature"
+      },
+      {
+        "id": "issue-34",
+        "number": 34,
+        "title": "Issue 11-1: OpenAI 呼び出しのタイムアウト/再試行/フォールバック",
+        "epic": 12,
+        "level": 9,
+        "dependencies": ["issue-27"],
+        "estimatedMinutes": 30,
+        "type": "feature"
+      },
+      {
+        "id": "issue-35",
+        "number": 35,
+        "title": "Issue 12-1: 監査ログの実装",
+        "epic": 13,
+        "level": 10,
+        "dependencies": ["issue-27"],
+        "estimatedMinutes": 30,
+        "type": "feature"
+      },
+      {
+        "id": "issue-36",
+        "number": 36,
+        "title": "Issue 13-1: 単体/結合/E2Eテストの実装",
+        "epic": 14,
+        "level": 11,
+        "dependencies": ["issue-15", "issue-16", "issue-17", "issue-18", "issue-19", "issue-20", "issue-21", "issue-22", "issue-23", "issue-24", "issue-25", "issue-26", "issue-27", "issue-28", "issue-29", "issue-30", "issue-31", "issue-32", "issue-33", "issue-34", "issue-35"],
+        "estimatedMinutes": 60,
+        "type": "test"
+      }
+    ],
+    "levels": [
+      {
+        "level": 0,
+        "issues": [15],
+        "concurrency": 1,
+        "description": "プロジェクト基盤"
+      },
+      {
+        "level": 1,
+        "issues": [16, 17],
+        "concurrency": 2,
+        "description": "データベース基盤"
+      },
+      {
+        "level": 2,
+        "issues": [18],
+        "concurrency": 1,
+        "description": "データ投入"
+      },
+      {
+        "level": 3,
+        "issues": [19, 20],
+        "concurrency": 2,
+        "description": "LLM基盤"
+      },
+      {
+        "level": 4,
+        "issues": [21, 22, 23],
+        "concurrency": 3,
+        "description": "出題エンジン"
+      },
+      {
+        "level": 5,
+        "issues": [24, 25],
+        "concurrency": 2,
+        "description": "採点エンジン"
+      },
+      {
+        "level": 6,
+        "issues": [26],
+        "concurrency": 1,
+        "description": "補完ロジック"
+      },
+      {
+        "level": 7,
+        "issues": [27],
+        "concurrency": 1,
+        "description": "API実装"
+      },
+      {
+        "level": 8,
+        "issues": [28, 29, 30, 31],
+        "concurrency": 4,
+        "description": "UI実装"
+      },
+      {
+        "level": 9,
+        "issues": [32, 33, 34],
+        "concurrency": 3,
+        "description": "追加機能"
+      },
+      {
+        "level": 10,
+        "issues": [35],
+        "concurrency": 1,
+        "description": "監査ログ"
+      },
+      {
+        "level": 11,
+        "issues": [36],
+        "concurrency": 1,
+        "description": "テスト"
+      }
+    ],
+    "parallelGroups": [
+      {
+        "group": 1,
+        "issues": [16, 17],
+        "canRunInParallel": true
+      },
+      {
+        "group": 2,
+        "issues": [19, 20],
+        "canRunInParallel": true
+      },
+      {
+        "group": 3,
+        "issues": [21, 22, 23],
+        "canRunInParallel": true
+      },
+      {
+        "group": 4,
+        "issues": [24, 25],
+        "canRunInParallel": true
+      },
+      {
+        "group": 5,
+        "issues": [28, 29, 30, 31],
+        "canRunInParallel": true
+      },
+      {
+        "group": 6,
+        "issues": [32, 33, 34],
+        "canRunInParallel": true
+      }
+    ]
+  },
+  "executionStrategy": {
+    "totalEstimatedMinutes": 450,
+    "sequentialEstimatedMinutes": 1200,
+    "parallelEfficiencyGain": "62.5%",
+    "maxConcurrency": 4,
+    "recommendedPhases": [
+      {
+        "phase": 1,
+        "description": "基盤構築",
+        "issues": [15, 16, 17, 18],
+        "estimatedMinutes": 120
+      },
+      {
+        "phase": 2,
+        "description": "コアロジック",
+        "issues": [19, 20, 21, 22, 23],
+        "estimatedMinutes": 90
+      },
+      {
+        "phase": 3,
+        "description": "機能実装",
+        "issues": [24, 25, 26, 27],
+        "estimatedMinutes": 90
+      },
+      {
+        "phase": 4,
+        "description": "UI・追加機能",
+        "issues": [28, 29, 30, 31, 32, 33, 34, 35],
+        "estimatedMinutes": 120
+      },
+      {
+        "phase": 5,
+        "description": "テスト",
+        "issues": [36],
+        "estimatedMinutes": 60
+      }
+    ]
+  }
+}

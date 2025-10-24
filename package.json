@@ -1,16 +1,65 @@
 {
-  "name": "1024_ax_skil-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "axcamp-miyabi-agent",
+  "version": "0.1.0",
+  "description": "AXCAMP - AI駆動テスト自動生成システム with Miyabi Agent Framework",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "scripts": {
+    "agents:parallel:exec": "tsx scripts/agents-parallel-executor.ts",
+    "agents:status": "tsx scripts/agents-status.ts",
+    "load:knowledge": "tsx scripts/load-knowledge.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.65.0",
+    "@octokit/graphql": "^7.0.2",
+    "@octokit/rest": "^20.0.0",
+    "@supabase/ssr": "^0.1.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^11.1.0",
+    "date-fns": "^3.3.1",
+    "dotenv": "^17.2.3",
+    "next": "14.1.0",
+    "openai": "^4.28.0",
+    "ora": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "yaml": "^2.3.4",
+    "zod": "^3.22.4"
+  },
   "devDependencies": {
-    "miyabi": "^0.15.0"
-  }
+    "@playwright/test": "^1.41.1",
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hughverine/1024_ax_skil-test.git"
+  },
+  "keywords": [
+    "miyabi",
+    "autonomous-agents",
+    "ai-driven-development",
+    "github-automation",
+    "axcamp"
+  ],
+  "author": "AX Corporation",
+  "license": "Apache-2.0"
 }
