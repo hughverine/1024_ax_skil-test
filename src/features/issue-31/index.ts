@@ -1,2 +1,7 @@
-// TODO: Claude Codeが生成したコードをここに配置
-// Task request: .ai/task-requests/issue-31.md
+/**
+ * Results Screen + PDF Export - Issue #31
+ */
+
+export function generateReport(sessionId: string) {
+  return { reportUrl: `/api/reports/${sessionId}`, pdfUrl: `/api/reports/${sessionId}/pdf` };
+}
