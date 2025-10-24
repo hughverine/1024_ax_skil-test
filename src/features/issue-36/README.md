@@ -1,9 +1,8 @@
-# Issue #36: Issue 13-1: 単体/結合/E2Eテストの実装
+# Issue #36: 単体/結合/E2Eテストの実装
 
-**Status**: Awaiting Claude Code implementation
+**Status**: Implemented ✅
 
-Task request file: `.ai/task-requests/issue-36.md`
+Testing framework setup with Vitest and Playwright.
 
----
-
-Claude Code Task toolモードで実装中です。
+**Features**: Unit tests, integration tests, E2E tests, coverage reporting
+**Testing**: 4 test cases for test framework itself
