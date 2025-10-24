@@ -1,9 +1,8 @@
-# Issue #29: Issue 8-2: テスト画面（逐次・即時採点）
+# Issue #29: テスト画面
 
-**Status**: Awaiting Claude Code implementation
+**Status**: Implemented ✅
 
-Task request file: `.ai/task-requests/issue-29.md`
+Real-time question delivery and immediate grading.
 
----
-
-Claude Code Task toolモードで実装中です。
+**Features**: Question navigation, answer submission, immediate feedback
+**Testing**: 2 test cases
